@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api/requests';
+const API_BASE_URL = 'https://caresmart-backend.vercel.app/api/requests';
 
 export const fetchRequests = async () => {
   try {

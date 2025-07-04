@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api/availability';
+const API_BASE_URL = 'https://caresmart-backend.vercel.app/api/availability';
 
 export const saveAvailability = async (availabilityData) => {
     const token = localStorage.getItem('token');

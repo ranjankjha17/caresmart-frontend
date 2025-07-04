@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api/otp';
+const API_BASE_URL = 'https://caresmart-backend.vercel.app/api/otp';
 
 export const sendOTP = async (mobileNumber) => {
   console.log('mob no',mobileNumber)

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = 'http://localhost:5000/api/profile';
+const API_BASE_URL = 'https://caresmart-backend.vercel.app/api/profile';
 
 export const getUser = async () => {
     const token = localStorage.getItem('token');
@@ -11,7 +11,7 @@ export const getUser = async () => {
     };
 
     try {
-        const response = await axios.get(`http://localhost:5000/api/user/me`, config);
+        const response = await axios.get(`https://caresmart-backend.vercel.app/api/user/me`, config);
         console.log("user",response.data)
         return response.data;
     } catch (error) {

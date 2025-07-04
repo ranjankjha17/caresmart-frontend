@@ -43,7 +43,7 @@ export const useProfileForm = () => {
         }));
 
         if (profile.profileImage) {
-          setPreviewImage(`http://localhost:5000${profile.profileImage}`);
+          setPreviewImage(`https://caresmart-backend.vercel.app${profile.profileImage}`);
         }
 
         const previews = {};
@@ -59,7 +59,7 @@ export const useProfileForm = () => {
           if (path) {
             previews[map[key]] = path.endsWith('.pdf')
               ? 'PDF Uploaded'
-              : `http://localhost:5000${path}`;
+              : `https://caresmart-backend.vercel.app${path}`;
           }
         }
 
@@ -165,7 +165,7 @@ export const useProfileForm = () => {
       };
 
       const response = await axios.put(
-        'http://localhost:5000/api/profile/update-profile',
+        'https://caresmart-backend.vercel.app/api/profile/update-profile',
         formData,
         config
       );

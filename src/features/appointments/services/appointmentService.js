@@ -127,7 +127,7 @@
 
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:5000/api';
+const BASE_URL = 'https://caresmart-backend.vercel.app/api';
 
 // Get auth headers with token
 const getAuthHeaders = () => {
