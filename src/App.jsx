@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { Signup } from './pages/auth/Signup';
 import { Login } from './pages/auth/Login';
-import { DashboardLayout } from './features/dashboard/components/DashboardLayout'; // Import your layout
+import { DashboardLayout } from './features/dashboard/components/DashboardLayout'; 
 import ProtectedRoute from './features/dashboard/components/ProtectedRoute';
 import { Dashboard } from './pages/Dashboard/Dashboard';
 import { Profile } from './pages/profile/Profile';
@@ -21,7 +21,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HealthcareDashboard />} />
+          <Route path="/" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
 
