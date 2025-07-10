@@ -87,7 +87,7 @@ const useDashboardData = () => {
       try {
         const [metrics, appointmentsData, clinicsData] = await Promise.all([
           fetchDashboardData(),
-          fetchAppointments('', 'all'),
+          fetchAppointments(filters.timeRange,filters.appointmentStatus),
           fetchClinics()
         ]);
 
@@ -95,7 +95,7 @@ const useDashboardData = () => {
         setAppointments(appointmentsData);
         setClinics(clinicsData);
       } catch (err) {
-        setError(err); // No need for `.message`, already clean in the service
+        setError(err);
       } finally {
         setLoading(false);
       }
